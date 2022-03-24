@@ -11,8 +11,8 @@ export function renderSkincare(component) {
 
     //fill with content 
     p.textContent = component.ingredient;
-    img.src = `./assets/${compound.ingredient}-skin.png`;
-    a.href = ''; //link to the skincare detail page here 
+    img.src = `./assets/${component.ingredient}-skin.png`;
+    a.href = `./skincare/?id=${component.id}`;
 
     div.append(p, img);
 
