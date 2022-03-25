@@ -8,7 +8,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function getSkincare() {
     const response = await client
         .from('skincare')
-        .select('*');
+        .select('*'); //means getting all details of table
     return response.body;
 }
 //
@@ -18,8 +18,8 @@ export async function getSkincareById(someId) {
     const response = await client
         .from('skincare')
         .select('*')
-        .match({ id: someId })
-        .single();
-    return response.body;
+        .match({ id: someId }) // right side: id that we're passing in , left is id from supabase
+        .single(); // if there are duplicates, this will give us the first item
+    return response.body; //contains pieces 
 
 }
