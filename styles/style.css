@@ -89,3 +89,14 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+
+.chemical {
+    display: flex;
+    background-color: antiquewhite;
+    margin-top: 40%;
+}
+
+img {
+    width:200px;
+}
